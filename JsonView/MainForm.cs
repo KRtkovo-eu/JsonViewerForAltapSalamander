@@ -3,15 +3,48 @@ using System.Windows.Forms;
 using EPocalipse.Json.Viewer;
 using System.IO;
 using System.ComponentModel;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace EPocalipse.Json.JsonView
 {
     public partial class MainForm : Form
     {
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        public static extern IntPtr FindWindow(string strClassName, string strWindowName);
+
+        [DllImport("user32.dll")]
+        public static extern bool GetWindowRect(IntPtr hwnd, ref Rect1 rectangle);
+
+        public struct Rect1
+        {
+            public int Left { get; set; }
+            public int Top { get; set; }
+            public int Right { get; set; }
+            public int Bottom { get; set; }
+        }
+
         public MainForm()
         {
             InitializeComponent();
             JsonViewer.PropertyChanged += new PropertyChangedEventHandler(JsonViewer_PropertyChanged);
+
+            try
+            {
+                var Salamander = Process.GetProcessesByName("salamand")[0];
+                Rect1 rect = new Rect1();
+                GetWindowRect(Salamander.MainWindowHandle, ref rect);
+
+                this.Width = rect.Right - rect.Left;
+                this.Height = rect.Bottom - rect.Top;
+                this.Left = rect.Left;
+                this.Top = rect.Top;
+            }
+            catch
+            {
+
+            }
+            
         }
 
         private void JsonViewer_PropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -40,18 +73,23 @@ namespace EPocalipse.Json.JsonView
         private void MainForm_Shown(object sender, EventArgs e)
         {
             string[] args = Environment.GetCommandLineArgs();
-            for (int i = 1; i < args.Length; i++)
+            if(args.Length > 1)
             {
-                string arg = args[i];
-                if (arg.Equals("/c", StringComparison.OrdinalIgnoreCase))
-                {
-                    LoadFromClipboard();
-                }
-                else if (File.Exists(arg))
-                {
-                    LoadFromFile(arg);
-                }
+                LoadFromFile(args[1]);
             }
+
+            //for (int i = 1; i < args.Length; i++)
+            //{
+            //    string arg = args[i];
+            //    if (arg.Equals("/c", StringComparison.OrdinalIgnoreCase))
+            //    {
+            //        LoadFromClipboard();
+            //    }
+            //    else if (File.Exists(arg))
+            //    {
+            //        LoadFromFile(arg);
+            //    }
+            //}
         }
 
         private void LoadFromFile(string fileName)
@@ -275,6 +313,16 @@ namespace EPocalipse.Json.JsonView
             {
                 Clipboard.SetText(node.JsonObject.Value.ToString());
             }
+        }
+
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (Form.ModifierKeys == Keys.None && keyData == Keys.Escape)
+            {
+                this.Close();
+                return true;
+            }
+            return base.ProcessDialogKey(keyData);
         }
     }
 }

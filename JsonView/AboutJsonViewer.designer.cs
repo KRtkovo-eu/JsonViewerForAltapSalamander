@@ -27,184 +27,135 @@ namespace EPocalipse.Json.JsonView
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutJsonViewer));
-            this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.logoPictureBox = new System.Windows.Forms.PictureBox();
-            this.labelProductName = new System.Windows.Forms.Label();
-            this.labelVersion = new System.Windows.Forms.Label();
-            this.labelCopyright = new System.Windows.Forms.Label();
-            this.labelCompanyName = new System.Windows.Forms.Label();
-            this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.okButton = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.tableLayoutPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // tableLayoutPanel
-            // 
-            this.tableLayoutPanel.ColumnCount = 3;
-            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
-            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67F));
-            this.tableLayoutPanel.Controls.Add(this.logoPictureBox, 0, 0);
-            this.tableLayoutPanel.Controls.Add(this.labelProductName, 2, 0);
-            this.tableLayoutPanel.Controls.Add(this.labelVersion, 2, 1);
-            this.tableLayoutPanel.Controls.Add(this.labelCopyright, 2, 2);
-            this.tableLayoutPanel.Controls.Add(this.labelCompanyName, 2, 3);
-            this.tableLayoutPanel.Controls.Add(this.textBoxDescription, 2, 4);
-            this.tableLayoutPanel.Controls.Add(this.okButton, 2, 8);
-            this.tableLayoutPanel.Controls.Add(this.linkLabel1, 2, 6);
-            this.tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel.Location = new System.Drawing.Point(18, 17);
-            this.tableLayoutPanel.Margin = new System.Windows.Forms.Padding(6);
-            this.tableLayoutPanel.Name = "tableLayoutPanel";
-            this.tableLayoutPanel.RowCount = 10;
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel.Size = new System.Drawing.Size(851, 536);
-            this.tableLayoutPanel.TabIndex = 0;
-            // 
-            // logoPictureBox
-            // 
-            this.logoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.logoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("logoPictureBox.Image")));
-            this.logoPictureBox.Location = new System.Drawing.Point(6, 6);
-            this.logoPictureBox.Margin = new System.Windows.Forms.Padding(6);
-            this.logoPictureBox.Name = "logoPictureBox";
-            this.tableLayoutPanel.SetRowSpan(this.logoPictureBox, 9);
-            this.logoPictureBox.Size = new System.Drawing.Size(262, 501);
-            this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.logoPictureBox.TabIndex = 12;
-            this.logoPictureBox.TabStop = false;
-            // 
-            // labelProductName
-            // 
-            this.labelProductName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelProductName.Location = new System.Drawing.Point(306, 0);
-            this.labelProductName.Margin = new System.Windows.Forms.Padding(12, 0, 6, 0);
-            this.labelProductName.MaximumSize = new System.Drawing.Size(0, 33);
-            this.labelProductName.Name = "labelProductName";
-            this.labelProductName.Size = new System.Drawing.Size(539, 33);
-            this.labelProductName.TabIndex = 19;
-            this.labelProductName.Text = "Product Name";
-            this.labelProductName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelVersion
-            // 
-            this.labelVersion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelVersion.Location = new System.Drawing.Point(306, 45);
-            this.labelVersion.Margin = new System.Windows.Forms.Padding(12, 0, 6, 0);
-            this.labelVersion.MaximumSize = new System.Drawing.Size(0, 33);
-            this.labelVersion.Name = "labelVersion";
-            this.labelVersion.Size = new System.Drawing.Size(539, 33);
-            this.labelVersion.TabIndex = 0;
-            this.labelVersion.Text = "Version";
-            this.labelVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelCopyright
-            // 
-            this.labelCopyright.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelCopyright.Location = new System.Drawing.Point(306, 90);
-            this.labelCopyright.Margin = new System.Windows.Forms.Padding(12, 0, 6, 0);
-            this.labelCopyright.MaximumSize = new System.Drawing.Size(0, 33);
-            this.labelCopyright.Name = "labelCopyright";
-            this.labelCopyright.Size = new System.Drawing.Size(539, 33);
-            this.labelCopyright.TabIndex = 21;
-            this.labelCopyright.Text = "Copyright";
-            this.labelCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelCompanyName
-            // 
-            this.labelCompanyName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelCompanyName.Location = new System.Drawing.Point(306, 135);
-            this.labelCompanyName.Margin = new System.Windows.Forms.Padding(12, 0, 6, 0);
-            this.labelCompanyName.MaximumSize = new System.Drawing.Size(0, 33);
-            this.labelCompanyName.Name = "labelCompanyName";
-            this.labelCompanyName.Size = new System.Drawing.Size(539, 33);
-            this.labelCompanyName.TabIndex = 22;
-            this.labelCompanyName.Text = "Company Name";
-            this.labelCompanyName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBoxDescription
-            // 
-            this.textBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxDescription.Location = new System.Drawing.Point(306, 186);
-            this.textBoxDescription.Margin = new System.Windows.Forms.Padding(12, 6, 6, 6);
-            this.textBoxDescription.Multiline = true;
-            this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.ReadOnly = true;
-            this.textBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxDescription.Size = new System.Drawing.Size(539, 216);
-            this.textBoxDescription.TabIndex = 23;
-            this.textBoxDescription.TabStop = false;
-            this.textBoxDescription.Text = "Description";
             // 
             // okButton
             // 
             this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.okButton.Location = new System.Drawing.Point(695, 474);
-            this.okButton.Margin = new System.Windows.Forms.Padding(6);
+            this.okButton.Location = new System.Drawing.Point(307, 125);
             this.okButton.Name = "okButton";
-            this.okButton.Size = new System.Drawing.Size(150, 33);
+            this.okButton.Size = new System.Drawing.Size(75, 24);
             this.okButton.TabIndex = 24;
-            this.okButton.Text = "&OK";
+            this.okButton.Text = "E&xit";
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(297, 428);
+            this.linkLabel1.Location = new System.Drawing.Point(21, 127);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(433, 20);
+            this.linkLabel1.Size = new System.Drawing.Size(217, 13);
             this.linkLabel1.TabIndex = 25;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Icon made by Vaadin from www.flaticon.com";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel1_LinkClicked);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 17);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "JSON Viewer";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(21, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(132, 13);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "2008 EPocalipse Software";
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(21, 72);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(154, 13);
+            this.linkLabel2.TabIndex = 28;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "2017 realworld666 Json Viewer";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
+            // linkLabel3
+            // 
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Location = new System.Drawing.Point(21, 85);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(137, 13);
+            this.linkLabel3.TabIndex = 29;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "2019 alebcay JSON Viewer";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            // 
+            // linkLabel4
+            // 
+            this.linkLabel4.AutoSize = true;
+            this.linkLabel4.Location = new System.Drawing.Point(21, 98);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(258, 13);
+            this.linkLabel4.TabIndex = 30;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "2020 KRtkovo.eu JSON Viewer for Altap Salamander";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 37);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Based on:";
+            // 
             // AboutJsonViewer
             // 
             this.AcceptButton = this.okButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(887, 570);
-            this.Controls.Add(this.tableLayoutPanel);
+            this.ClientSize = new System.Drawing.Size(394, 161);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.linkLabel4);
+            this.Controls.Add(this.linkLabel3);
+            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.okButton);
+            this.Controls.Add(this.linkLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AboutJsonViewer";
-            this.Padding = new System.Windows.Forms.Padding(18, 17, 18, 17);
+            this.Padding = new System.Windows.Forms.Padding(9, 9, 9, 9);
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "AboutJsonViewer";
-            this.Load += new System.EventHandler(this.AboutJsonViewer_Load);
-            this.tableLayoutPanel.ResumeLayout(false);
-            this.tableLayoutPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
+            this.Text = "About JSON Viewer";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
-        private System.Windows.Forms.PictureBox logoPictureBox;
-        private System.Windows.Forms.Label labelProductName;
-        private System.Windows.Forms.Label labelVersion;
-        private System.Windows.Forms.Label labelCopyright;
-        private System.Windows.Forms.Label labelCompanyName;
-        private System.Windows.Forms.TextBox textBoxDescription;
         private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.LinkLabel linkLabel4;
+        private System.Windows.Forms.Label label3;
     }
 }
