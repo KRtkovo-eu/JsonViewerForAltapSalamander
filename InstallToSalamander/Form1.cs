@@ -90,7 +90,7 @@ namespace InstallToSalamander
             jsonViewerAdded.SetValue("Command", $@"{installationPath}\JsonView.exe");
             jsonViewerAdded.SetValue("Initial Directory", "$(FullPath)");
             jsonViewerAdded.SetValue("Masks", "*.json");
-            jsonViewerAdded.SetValue("Type", 1);
+            jsonViewerAdded.SetValue("Type", 0);
             progressBar1.Value = progressBar1.Value + 1;
 
             int allFilesId = lastViewerId;
